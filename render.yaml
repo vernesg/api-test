@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: fbpost-api
+    name: fbpost-billboard-api
     env: node
     buildCommand: npm install
     startCommand: node server.js
