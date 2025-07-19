@@ -1,6 +1,5 @@
 const express = require("express");
 const Jimp = require("jimp");
-const axios = require("axios");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -15,8 +14,8 @@ app.get("/fbpost", async (req, res) => {
     const base = await Jimp.read("https://i.ibb.co/4wpSssT/518003935.jpg");
     const overlay = await Jimp.read(imageUrl);
 
-    overlay.cover(400, 400);
-    base.composite(overlay, 30, 100);
+    overlay.cover(400, 400); // Resize to fit
+    base.composite(overlay, 30, 100); // Position on background
 
     if (text) {
       const font = await Jimp.loadFont(Jimp.FONT_SANS_32_WHITE);
