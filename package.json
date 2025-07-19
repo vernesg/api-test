@@ -1,7 +1,7 @@
 {
-  "name": "fbpost-api",
+  "name": "fbpost-billboard-api",
   "version": "1.0.0",
-  "description": "Facebook-style post generator",
+  "description": "Displays a static Facebook-style image with overlaid text like a billboard",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
